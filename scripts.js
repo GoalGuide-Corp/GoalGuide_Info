@@ -1,6 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
     const content = document.getElementById('content');
 
+    // Function to update the content based on the current hash
+    function updateContent() {
+        const hash = window.location.hash || '#home';
+
+        if (hash === '#home') {
+            loadHomepage();
+        } else if (hash === '#github') {
+            loadGithubPage();
+        } else if (hash === '#final-report') {
+            loadFinalReportPage();
+        } else if (hash === '#video') {
+            loadVideoPage();
+        } else if (hash === '#contact') {
+            loadContactUsPage();
+        } else {
+            content.innerHTML = `<h2>Page Not Found</h2><p>The requested page does not exist.</p>`;
+        }
+    }
+
     // Homepage
     function loadHomepage() {
         content.innerHTML = `
@@ -75,32 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     }
 
-    // Event listeners for navigation
-    document.getElementById('homepage-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        loadHomepage();
-    });
+    // Listen for hash changes
+    window.addEventListener('hashchange', updateContent);
 
-    document.getElementById('github-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        loadGithubPage();
-    });
-
-    document.getElementById('final-report-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        loadFinalReportPage();
-    });
-
-    document.getElementById('video-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        loadVideoPage();
-    });
-
-    document.getElementById('contact-us-link').addEventListener('click', function (e) {
-        e.preventDefault();
-        loadContactUsPage();
-    });
-
-    // Default to the homepage
-    loadHomepage();
+    // Load the initial content
+    updateContent();
 });
