@@ -1,44 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Goal Guide</title>
-    <meta name="description" content="Goal Guide Project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Goal Guide</h1>
-        </div>
-    </header>
+<html>
 
-    <div class="sidebar">
-        <nav>
-            <ul>
-                <li><a href="#home">Homepage</a></li>
-                <li><a href="#github">GitHub</a></li>
-                <li><a href="#final-report">Final Report</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
+    <head>
+        <meta charset="utf-8" />
+        <title>Goal Guide</title>
+        <meta name="description" content="Senior Project"/>
+        <meta name="author" content="Gwendolyn Smith-Hill, Mikias Tadasse, Abigail Begashaw"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <h1> INDY 6 - Goal Tracker App</h1>
+                <img class="logo" src="images/logo.png" alt="GG Logo" />
+                <div class="heading">
+                    <h3> Your Path... One Step At A Time </h3>
+                </div>
+            </div>
+        </header>
+
+        <nav class="topnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="results.html">Results</a>
+            <a href="report.html">Report</a>
+            <a href="presentation.html">Presentation</a>
+            <a href="https://github.com/GoalGuide-Corp/GoalGuide" target="_blank">GitHub</a>
         </nav>
-    </div>
-    
 
-    <main class="content" id="content">
-        <!-- Dynamic content will load here -->
-    </main>
+        <section id="team">
+            <div class="container">
+                <h2 class="team">Meet the Team</h2>
+                <div class="row">
+                    
+                    <div class="card">
+                        <img src="images/Abigail.png" alt="Profile Picture" class="profile-pic">
+                        <h3>Abigail Begashaw</h3>
+                        <p>Role: UI/UX and Tester</p>
+                    </div>
+                    
+            
+                    <div class="card">
+                        <img src="images/Mikias.jpg" alt="Profile Picture" class="profile-pic">
+                        <h3>Mikias Tadesse</h3>
+                        <p>Role: Developer</p>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="images/Gwendolyn.jpg" alt="Profile Picture" class="profile-pic">
+                    <h3>Gwendolyn Smith-Hill</h3>
+                    <p>Role: UI/UX and Documentation</p>
+                    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Goal Guide Project. All rights reserved.</p>
-        </div>
-    </footer>
+                </div>
+            </div>
+        </section>
+           
+        <section class="course">
+            <p>Kennesaw State University - Fall 2024</p>
+            <p>CS4850_W03 - Senior Project</p>
+        </section>
 
+
+        <footer class="footer">
+            <div>
+                <p>&copy2024; Goal Guide Team - All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+
+</html>
     <script src="scripts.js" async defer></script>
 </body>
 </html>
