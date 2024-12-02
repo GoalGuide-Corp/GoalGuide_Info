@@ -1,71 +1,100 @@
-/* Reset some basic elements for consistency */
+/* General Reset */
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set up a simple, modern font */
+/* Body styling */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
     color: #333;
-    line-height: 1.6;
-}
-
-/* Container to center the content */
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 /* Header styling */
 header {
     background-color: #2C3E50;
     color: white;
-    padding: 20px 0;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.8rem;
     font-weight: 700;
-    font-size: 2.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #F4C542;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
+.sidebar nav ul li a {
     text-decoration: none;
-    font-weight: 400;
+    color: black;
     font-size: 1.2rem;
-    transition: color 0.3s ease-in-out;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #1ABC9C;
+.sidebar nav ul li a:hover {
+    color: #2C3E50;
 }
 
 /* Main content styling */
-main {
-    padding: 20px 0;
-    text-align: center;
+main.content {
+    margin-left: 20%;
+    padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.team-member p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #555;
 }
 
 /* Footer styling */
@@ -73,19 +102,6 @@ footer {
     background-color: #2C3E50;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+    padding: 10px 0;
     font-size: 0.9rem;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
 }
