@@ -1,108 +1,203 @@
-/* General Reset */
-body, h1, h2, p, ul {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6;
 }
 
-/* Body */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
 }
 
 /* Header */
 header {
-    background-color: #1B263B;
-    color: white;
+    background-color: #bee4ba; /* Light green */
+    color: #333;
+    padding: 20px 0;
     text-align: center;
-    padding: 15px 0;
-    font-size: 1.8rem;
-    font-weight: 700;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Sidebar */
-.sidebar {
-    background-color: #334E68;
-    width: 20%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 20px;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar nav ul li {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.sidebar nav ul li a {
-    text-decoration: none;
-    color: #f4f4f9;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 10px;
-    display: block;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.sidebar nav ul li a:hover {
-    background-color: #1B263B;
-    color: #A4EBF3;
-}
-
-/* Main content */
-main.content {
-    margin-left: 20%;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-grow: 1;
-    overflow-y: auto;
+}
+
+header h1 {
+    margin: 5px 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.logo {
+    height: 125px;
+    margin: 15px 3px;
+    border-radius: 35%;
+}
+
+.heading h3 {
+    margin: 10px 25px;
+    font-size: 1.6em;
+    font-style: italic;
+}
+
+/* Navigation */
+.topnav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #66cf5b#4CAF50; /* Green */
+    padding: 10px 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    margin-top: 1%;
+    border-radius: 35px;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: rgb(87, 75, 75);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 35%;
+}
+
+.topnav a.active,
+.topnav a:hover {
+    background-color: #3e8e41; /* Darker green for hover and active */
+    color: #fff;
+    border-radius: 160%;
+}
+
+/* Sections */
+section {
+    padding: 10px 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1em;
+    text-align: center;
+    color: #666;
 }
 
 /* Team Section */
-.team-section {
+.row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
     gap: 20px;
 }
 
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.team {
+    padding-bottom: 16px;
 }
 
-.github-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1B263B; /* Navy blue */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+.card {
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    width: 200px;
+    text-align: center;
+    padding: 0;
+    margin: 0 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.25em;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.0em;
+    color: #555;
+}
+
+/* Report Section */
+.content-section {
     text-align: center;
 }
 
-.github-button:hover {
-    background-color: #334E68; /* Dark teal */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
+
+.course p{
+    font-size: 25px;
+    margin: 0.5%;
+    
+}
+
+/* Video Section */
+video {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topnav {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
 }
